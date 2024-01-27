@@ -1,0 +1,20 @@
+&cntrl                                                                         
+  imin = 0 ! BioBB simulation_type nvt|npt|free|heat                           
+  cut = 10.0 ! BioBB simulation_type nvt|npt|free|heat                         
+  ntr = 0 ! BioBB simulation_type nvt|npt|free|heat                            
+  ntc = 2 ! BioBB simulation_type nvt|npt|free|heat                            
+  ntf = 2 ! BioBB simulation_type nvt|npt|free|heat                            
+  ntt = 3 ! BioBB simulation_type nvt|npt|free|heat                            
+  ig = -1 ! BioBB simulation_type nvt|npt|free|heat                            
+  ioutfm = 1 ! BioBB simulation_type nvt|npt|free|heat                         
+  iwrap = 1 ! BioBB simulation_type nvt|npt|free|heat                          
+  nstlim = 30000000 ! BioBB property                                             
+  dt = 0.002 ! BioBB simulation_type nvt|npt|free|heat                         
+  ntwx = 500 ! BioBB property                                                  
+  igamd = 15, iE = 1, iEP = 1, iED = 1, irest_gamd = 0,
+  ntcmd = 5000000, nteb = 25000000, ntave = 1000000,
+  ntcmdprep = 4000000, ntebprep = 4000000,
+  sigma0P = 6.0, sigma0D = 6.0,
+  icfe = 1, ifsc = 1, gti_cpu_output = 0,gti_add_sc = 1,
+  timask1 = ':1-3', scmask1 = ':1-3', timask2 = '', scmask2 = '',
+&end  

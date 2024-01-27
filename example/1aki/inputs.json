@@ -1,0 +1,77 @@
+{
+    "forcefield": {
+        "forcefield" : ["protein.ff19SB"]
+    },
+    "prop_min_vacuo": {
+      "simulation_type": "min_vacuo",
+      "mdin": {
+        "maxcyc": 500,
+        "ntpr": 5,
+        "ntr": 1,
+        "restraintmask": "':*&!@H='",
+        "restraint_wt": 50.0
+      }
+    },
+    "solvate_prop": {
+      "forcefield": ["protein.ff19SB"],
+      "water_type": "TIP3PBOX",
+      "distance_to_molecule": "9.0",
+      "box_type": "truncated_octahedron"
+    },
+    "ions_prop": {
+      "forcefield": ["protein.ff19SB"],
+      "neutralise": true,
+      "positive_ions_type": "Na+",
+      "negative_ions_type": "Cl-",
+      "ionic_concentration": 150,
+      "box_type": "truncated_octahedron"
+    },
+    "prop_min": {
+      "simulation_type": "minimization",
+      "mdin": {
+        "maxcyc": 300,
+        "ntr": 1,
+        "restraintmask": "\"!:WAT,Cl-,Na+\"",
+        "restraint_wt": 50.0
+      }
+    },
+    "prop_heat": {
+      "simulation_type": "heat",
+      "binary_path": "path_to_amber/22/bin/pmemd.cuda",
+      "mdin": {
+        "nstlim": 250000,
+        "ntr": 1,
+        "restraintmask": "\"!:WAT,Cl-,Na+\"",
+        "restraint_wt": 10.0
+      }
+    },
+    "prop_nvt": {
+      "simulation_type": "nvt",
+      "binary_path": "path_to_amber/22/bin/pmemd.cuda",
+      "mdin": {
+        "nstlim": 500000,
+        "ntr": 1,
+        "restraintmask": "\"!:WAT,Cl-,Na+ & !@H=\"",
+        "restraint_wt": 5.0
+      }
+    },
+    "prop_npt": {
+      "simulation_type": "npt",
+      "binary_path": "path_to_amber/22/bin/pmemd.cuda",
+      "mdin": {
+        "nstlim": 500000,
+        "ntr": 1,
+        "restraintmask": "\"!:WAT,Cl-,Na+ & !@H=\"",
+        "restraint_wt": 2.5
+      }
+    },
+    "prop_free": {
+      "simulation_type": "free",
+      "binary_path": "path_to_amber/22/bin/pmemd.cuda",
+      "mdin": {
+        "nstlim": 2500000,
+        "ntwx": 500
+      }
+    }
+}
+  
