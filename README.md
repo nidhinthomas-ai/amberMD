@@ -1,5 +1,4 @@
 # amberMD
-==============================
 
 A python based workflow to perform MD simulations of proteins and peptides in AMBER software. 
 
