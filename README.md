@@ -52,8 +52,3 @@ MD simulations are computationally intensitive exercises. Therefore, users shoul
 ## Tutorial:
 
 There are two tutorials available for this workflow. The tutorials can be found in the example directory. In the first tutorial, a protein-in-solution is simulated. In the second tutorial, a protein-ligand complex solvated in water is simulated. Each step taken to run the simulation is described in the respective jupyter notebooks. 
-
-## Post-simulation analyses:
-
-Post-simulation trajectory analyses include RMSD and RMSF calculation of the protein, and Principal Component Analysis (PCA) of the protein trajectory. The analysis can be found in the jupyter notebook `Analysis.ipynb` in `notebooks` directory. 
-
